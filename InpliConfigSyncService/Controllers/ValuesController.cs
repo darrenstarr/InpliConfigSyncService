@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
@@ -23,10 +24,24 @@ namespace InpliConfigSyncService.Controllers
             return "value";
         }
 
+        public class ConfigRequestObject
+        {
+            public string DeviceId { get; set; }
+            public Guid ConfigurationId { get; set; }
+        }
+
         // POST api/values
         [HttpPost]
-        public void Post([FromBody]string value)
+        public async void Post([FromBody]ConfigRequestObject configRequest)
         {
+            var deviceAddress = IPAddress.Parse(configRequest.DeviceId);
+            await Services.SnmpTools.SnmpSetAsync(deviceAddress, "1.3.6.1.4.1.9.9.96.1.1.1.1.14.111", 6);
+            await Services.SnmpTools.SnmpSetAsync(deviceAddress, "1.3.6.1.4.1.9.9.96.1.1.1.1.2.111", 1);
+            await Services.SnmpTools.SnmpSetAsync(deviceAddress, "1.3.6.1.4.1.9.9.96.1.1.1.1.3.111", 4);
+            await Services.SnmpTools.SnmpSetAsync(deviceAddress, "1.3.6.1.4.1.9.9.96.1.1.1.1.4.111", 1);
+            await Services.SnmpTools.SnmpSetAsync(deviceAddress, "1.3.6.1.4.1.9.9.96.1.1.1.1.5.111", IPAddress.Parse("10.100.1.105"));
+            await Services.SnmpTools.SnmpSetAsync(deviceAddress, "1.3.6.1.4.1.9.9.96.1.1.1.1.6.111", configRequest.ConfigurationId.ToString());
+            await Services.SnmpTools.SnmpSetAsync(deviceAddress, "1.3.6.1.4.1.9.9.96.1.1.1.1.14.111", 1);
         }
 
         // PUT api/values/5

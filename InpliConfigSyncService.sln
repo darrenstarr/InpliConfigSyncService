@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InpliConfigSyncService", "InpliConfigSyncService\InpliConfigSyncService.csproj", "{31CAC3E5-7AC6-488D-9376-02C6D19A82E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InpliConfigSyncService", "InpliConfigSyncService\InpliConfigSyncService.csproj", "{31CAC3E5-7AC6-488D-9376-02C6D19A82E6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{C2E4CC15-75F0-4787-9621-5123D0EE3A1E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnmpSharpNet", "Modules\SnmpSharpNet\SnmpSharpNet\SnmpSharpNet.csproj", "{4265313B-B630-4ED3-8FBE-648F9E2E87A3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "libtftp", "Modules\InpliTftpServer\libtftp\libtftp.csproj", "{8F8F93FA-A942-42E3-8E41-7AAC563A215B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +21,21 @@ Global
 		{31CAC3E5-7AC6-488D-9376-02C6D19A82E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31CAC3E5-7AC6-488D-9376-02C6D19A82E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31CAC3E5-7AC6-488D-9376-02C6D19A82E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4265313B-B630-4ED3-8FBE-648F9E2E87A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4265313B-B630-4ED3-8FBE-648F9E2E87A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4265313B-B630-4ED3-8FBE-648F9E2E87A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4265313B-B630-4ED3-8FBE-648F9E2E87A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F8F93FA-A942-42E3-8E41-7AAC563A215B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F8F93FA-A942-42E3-8E41-7AAC563A215B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F8F93FA-A942-42E3-8E41-7AAC563A215B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F8F93FA-A942-42E3-8E41-7AAC563A215B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4265313B-B630-4ED3-8FBE-648F9E2E87A3} = {C2E4CC15-75F0-4787-9621-5123D0EE3A1E}
+		{8F8F93FA-A942-42E3-8E41-7AAC563A215B} = {C2E4CC15-75F0-4787-9621-5123D0EE3A1E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D90C27-96DA-4EEC-96C3-09953A83324C}
