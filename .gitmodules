@@ -1,0 +1,6 @@
+[submodule "Modules/SnmpSharpNet"]
+	path = Modules/SnmpSharpNet
+	url = https://github.com/darrenstarr/SnmpSharpNet.git
+[submodule "Modules/InpliTftpServer"]
+	path = Modules/InpliTftpServer
+	url = https://github.com/darrenstarr/InpliTftpServer.git
