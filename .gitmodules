@@ -4,3 +4,9 @@
 [submodule "Modules/InpliTftpServer"]
 	path = Modules/InpliTftpServer
 	url = https://github.com/darrenstarr/InpliTftpServer.git
+[submodule "Modules/InpliSyslogServer"]
+	path = Modules/InpliSyslogServer
+	url = https://github.com/darrenstarr/InpliSyslogServer.git
+[submodule "modules/InpliDataModel"]
+	path = modules/InpliDataModel
+	url = https://github.com/darrenstarr/InpliDataModel.git
