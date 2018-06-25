@@ -10,24 +10,24 @@
 
     public class SnmpTools
     {
-        public static Task SnmpSetAsync(IPAddress destination, string oid, int value)
+        public static Task SnmpSetAsync(IPAddress destination, string community, string oid, int value)
         {
-            return SnmpSetAsync(destination, oid, (AsnType)(new Integer32(value)));
+            return SnmpSetAsync(destination, community, oid, (AsnType)(new Integer32(value)));
         }
 
-        public static Task SnmpSetAsync(IPAddress destination, string oid, string value)
+        public static Task SnmpSetAsync(IPAddress destination, string community, string oid, string value)
         {
-            return SnmpSetAsync(destination, oid, new OctetString(value));
+            return SnmpSetAsync(destination, community, oid, new OctetString(value));
         }
 
-        public static Task SnmpSetAsync(IPAddress destination, string oid, IPAddress value)
+        public static Task SnmpSetAsync(IPAddress destination, string community, string oid, IPAddress value)
         {
-            return SnmpSetAsync(destination, oid, new IpAddress(value));
+            return SnmpSetAsync(destination, community, oid, new IpAddress(value));
         }
 
-        public static Task SnmpSetAsync(IPAddress destination, string oid, AsnType value)
+        public static Task SnmpSetAsync(IPAddress destination, string community, string oid, AsnType value)
         {
-            return SnmpSetAsync(destination, new Oid(oid), value);
+            return SnmpSetAsync(destination, community, new Oid(oid), value);
         }
 
         /// <summary>
@@ -37,7 +37,7 @@
         /// <param name="oid">The OID to set.</param>
         /// <param name="value">The value to set.</param>
         /// <returns>Nothing.</returns>
-        public static async Task SnmpSetAsync(IPAddress destination, Oid oid, AsnType value)
+        public static async Task SnmpSetAsync(IPAddress destination, string community, Oid oid, AsnType value)
         {
             UdpTarget target = new UdpTarget(destination);
 
@@ -47,7 +47,7 @@
             pdu.VbList.Add(oid, value);
 
             // Set Agent security parameters
-            AgentParameters aparam = new AgentParameters(ESnmpVersion.Ver2, new OctetString("MONKEY"));
+            AgentParameters aparam = new AgentParameters(ESnmpVersion.Ver2, new OctetString(community));
 
             // Response packet
             SnmpV2Packet response;

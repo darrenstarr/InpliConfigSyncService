@@ -11,6 +11,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnmpSharpNet", "Modules\Snm
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "libtftp", "Modules\InpliTftpServer\libtftp\libtftp.csproj", "{8F8F93FA-A942-42E3-8E41-7AAC563A215B}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "libsyslog", "Modules\InpliSyslogServer\libsyslog\libsyslog.csproj", "{F1E90FB6-FC79-4E93-9AC9-B9F12B157F4D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InpliDataModel", "Modules\InpliDataModel\InpliDataModel\InpliDataModel.csproj", "{8E69CCB5-527F-4220-8943-793F18B4024A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +33,14 @@ Global
 		{8F8F93FA-A942-42E3-8E41-7AAC563A215B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F8F93FA-A942-42E3-8E41-7AAC563A215B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F8F93FA-A942-42E3-8E41-7AAC563A215B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1E90FB6-FC79-4E93-9AC9-B9F12B157F4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1E90FB6-FC79-4E93-9AC9-B9F12B157F4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1E90FB6-FC79-4E93-9AC9-B9F12B157F4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1E90FB6-FC79-4E93-9AC9-B9F12B157F4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E69CCB5-527F-4220-8943-793F18B4024A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E69CCB5-527F-4220-8943-793F18B4024A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E69CCB5-527F-4220-8943-793F18B4024A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E69CCB5-527F-4220-8943-793F18B4024A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -36,6 +48,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{4265313B-B630-4ED3-8FBE-648F9E2E87A3} = {C2E4CC15-75F0-4787-9621-5123D0EE3A1E}
 		{8F8F93FA-A942-42E3-8E41-7AAC563A215B} = {C2E4CC15-75F0-4787-9621-5123D0EE3A1E}
+		{F1E90FB6-FC79-4E93-9AC9-B9F12B157F4D} = {C2E4CC15-75F0-4787-9621-5123D0EE3A1E}
+		{8E69CCB5-527F-4220-8943-793F18B4024A} = {C2E4CC15-75F0-4787-9621-5123D0EE3A1E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D90C27-96DA-4EEC-96C3-09953A83324C}
